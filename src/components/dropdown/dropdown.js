@@ -32,7 +32,7 @@ function Dropdown({
     setOpen(false);
   };
 
-  const minContentsHeight = 36 * Math.max(dropdownItems.length, 1);
+  const minContentsHeight = 34.5 * Math.max(dropdownItems.length, 1);
 
   return (
     <div
@@ -54,15 +54,12 @@ function Dropdown({
         )}
       </div>
       {isOpen ? (
-        <div
-          style={{ minHeight: minContentsHeight }}
-          className={"dropdown-inner"}
-        >
+        <div style={{ minHeight: 200 }} className={"dropdown-inner"}>
           <Scrollbars
             hideTracksWhenNotNeeded={true}
             style={{
               width: 165,
-              height: Math.min(300, minContentsHeight),
+              height: Math.min(200, minContentsHeight),
             }}
           >
             <div className={"dropdown-contents"}>
