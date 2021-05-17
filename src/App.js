@@ -154,7 +154,11 @@ function App() {
             <div className={"class-selector"}>
               <Dropdown
                 attributeName={"className"}
-                onSelect={(playerClass) => setSelectedClass(playerClass)}
+                onSelect={(playerClass) => {
+                  setSelectedClass(playerClass);
+                  // Clear spec when selecting new class
+                  setSelectedSpec(null);
+                }}
                 dropdownItems={playerClasses}
                 selectedItem={selectedClass}
                 closedText="Select Class"
